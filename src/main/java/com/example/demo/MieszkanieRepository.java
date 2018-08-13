@@ -7,8 +7,7 @@ import java.util.List;
 
 public interface MieszkanieRepository extends JpaRepository<Mieszkanie,Long> {
 
-    @Query(value = "select * from mieszkanie ", nativeQuery = true)
-    List<Mieszkanie> findAll();
+
 
 
 }

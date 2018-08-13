@@ -11,7 +11,7 @@ public class Adres {
     private Long Id;
     private String ulica;
     private int nr;
-    @OneToMany(mappedBy = "Aders")
+    @OneToMany(mappedBy = "adres")
     private List<Wspolnota> wspolnota;
 
     public List<Wspolnota> getWspolnota() {
