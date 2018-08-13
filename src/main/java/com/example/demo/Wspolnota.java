@@ -11,10 +11,10 @@ public class Wspolnota {
     @GeneratedValue
     private Long Id;
     private String nazwaWspolnoty;
-    @ManyToOne
-    private Adres adres;
     @OneToMany
-    private List<Mieszkanie> listaMieszkan;
+    private List<Adres> adres;
+    @OneToMany
+    private List<Mieszkanie> mieszkanie;
 
 
 
@@ -26,19 +26,19 @@ public class Wspolnota {
         this.nazwaWspolnoty = nazwaWspolnoty;
     }
 
-    public Adres getAdres() {
+    public List<Adres> getAdres() {
         return adres;
     }
 
-    public void setAdres(Adres adres) {
+    public void setAdres(List<Adres> adres) {
         this.adres = adres;
     }
 
     public List<Mieszkanie> getMieszkanie() {
-        return listaMieszkan;
+        return mieszkanie;
     }
 
     public void setMieszkanie(List<Mieszkanie> mieszkanie) {
-        this.listaMieszkan = mieszkanie;
+        this.mieszkanie = mieszkanie;
     }
 }

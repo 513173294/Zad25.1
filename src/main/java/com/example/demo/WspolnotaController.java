@@ -9,24 +9,26 @@ import java.util.List;
 @Controller
 public class WspolnotaController {
 
-private MieszkanieRepository mieszkanieRepository;
-private WspolnotaRepository wspolnotaRepository;
+    private MieszkanieRepository mieszkanieRepository;
+    private WspolnotaRepository wspolnotaRepository;
 
     public WspolnotaController(MieszkanieRepository mieszkanieRepository, WspolnotaRepository wspolnotaRepository) {
         this.mieszkanieRepository = mieszkanieRepository;
         this.wspolnotaRepository = wspolnotaRepository;
     }
 
-@GetMapping("/")
-    public String main(Model model){
-    List<Wspolnota> wspolnotas;
-    wspolnotas= wspolnotaRepository.findAll();
+    @GetMapping("/")
+    public String main(Model model) {
+        List<Wspolnota> wspolnotas;
+        wspolnotas = wspolnotaRepository.findAll();
 
-model.addAttribute("wspolnoty",wspolnotas);
+        List<Mieszkanie> mieszkania;
+        mieszkania = mieszkanieRepository.findAll();
 
-    return "home";
-}
-
+        model.addAttribute("wspolnoty", wspolnotas);
+        model.addAttribute("lokale", mieszkania);
+        return "home";
+    }
 
 
 }

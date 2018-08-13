@@ -27,9 +27,35 @@
         <tbody>
         <tr th:each= "wspolnota: ${wspolnoty}">
            <td th:text ="${wspolnota.nazwaWspolnoty}"></td>
-           <td th:text ="${wspolnota.getAdres().getUlica()}"></td>
-           <td th:text ="${wspolnota.getAdres().getNr()}"></td>
-           <td th:number ="${wspolnota.mieszkanie.size()}"></td>
+           <td th:text ="${wspolnota.getAdres()}"></td>
+
+           <td th:text ="${wspolnota.mieszkanie.size()}"></td>
+        </tr>
+
+        </tbody>
+
+
+    </table>
+</div>
+
+
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>numer mieszkania</th>
+            <th>powierzchnia</th>
+            <th>wspolnota</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each= "mieszzkanie: ${lokale}">
+            <td th:text ="${mieszzkanie.getNumer()}"></td>
+            <td th:text ="${mieszzkanie.getPowierzchnia()}"></td>
+            <td th:text ="${mieszzkanie.getWspolnota()}"></td>
+            <td th:text ="${mieszzkanie.getMieszkancy()}"></td>
+
         </tr>
 
         </tbody>
