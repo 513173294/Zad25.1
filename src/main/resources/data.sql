@@ -11,6 +11,6 @@ INSERT into mieszkanie (id, numer, powierzchnia) VALUES (5,5,70.4);
 INSERT into mieszkanie (id, numer, powierzchnia) VALUES (6,7,34.6);
 
 INSERT into wspolnota (id, nazwa_wspolnoty, adres_id, mieszkanie_id) VALUES (1, 'klon',1,1);
-INSERT into wspolnota (id, nazwa_wspolnoty, adres_id, mieszkanie_id) VALUES (2, 'klon',1,1);
-INSERT into wspolnota (id, nazwa_wspolnoty, adres_id, mieszkanie_id) VALUES (3, 'klon',1,1);
-INSERT into wspolnota (id, nazwa_wspolnoty, adres_id, mieszkanie_id) VALUES (4, 'klon',1,1);
+INSERT into wspolnota (id, nazwa_wspolnoty, adres_id, mieszkanie_id) VALUES (2, 'klon',2,2);
+INSERT into wspolnota (id, nazwa_wspolnoty, adres_id, mieszkanie_id) VALUES (3, 'klon',3,3);
+INSERT into wspolnota (id, nazwa_wspolnoty, adres_id, mieszkanie_id) VALUES (4, 'klon',1,4);
