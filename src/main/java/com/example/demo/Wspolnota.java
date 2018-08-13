@@ -2,6 +2,7 @@ package com.example.demo;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Wspolnota {
@@ -12,8 +13,9 @@ public class Wspolnota {
     private String nazwaWspolnoty;
     @ManyToOne
     private Adres adres;
-    @ManyToOne
-    private Mieszkanie mieszkanie;
+    @OneToMany
+    private List<Mieszkanie> listaMieszkan;
+
 
 
     public String getNazwaWspolnoty() {
@@ -32,11 +34,11 @@ public class Wspolnota {
         this.adres = adres;
     }
 
-    public Mieszkanie getMieszkanie() {
-        return mieszkanie;
+    public List<Mieszkanie> getMieszkanie() {
+        return listaMieszkan;
     }
 
-    public void setMieszkanie(Mieszkanie mieszkanie) {
-        this.mieszkanie = mieszkanie;
+    public void setMieszkanie(List<Mieszkanie> mieszkanie) {
+        this.listaMieszkan = mieszkanie;
     }
 }
